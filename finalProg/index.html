@@ -1,0 +1,254 @@
+<html>
+
+<head>
+	<meta charset="utf8">
+
+
+	
+
+	<script src="p5.js"></script>
+	<style>
+		#white {
+			background-color: #dee2de;
+		}
+
+		#green {
+
+			background-color: #29d829;
+		}
+
+		#red {
+			background-color: #f44242;
+		}
+
+		#blue {
+			background-color: #9eaa1e;
+		}
+
+		#purple {
+			background-color: #2a14ba;
+		}
+
+		#dark {
+			background-color: #7644a7;
+		}
+
+		#grey {
+			background-color: #000000;
+		}
+
+		div {
+			display: inline-block;
+		}
+
+		table,
+		tr,
+		td {
+			border: 1px solid black;
+			border-collapse: collapse;
+			padding: 5px;
+		}
+
+		table {
+			margin-top: 20px;
+			margin-right: 20px;
+			float: right;
+		}
+
+		body {
+			font-family: optima
+		}
+
+		#first {
+			background-color: #232323;
+			color: white;
+		}
+
+		.alice {
+			border-color: aliceblue;
+			height: 40px;
+		}
+	</style>
+</head>
+
+
+<body>	
+	
+		<script src="script.js"></script>
+	<script src="class.grass.js"></script>
+	
+	<script src = "class.eatgrass.js"></script>
+	<script src = "class.predator.js"></script>
+	<script src = "class.mard.js"></script>
+	<script src = "class.satana.js"></script>
+	<script src = "class.xotachacnox.js"> </script>
+	<table>
+		<tr id="first">
+			<td class="alice"></td>
+			<td class="alice">Color</td>
+			<td class="alice">Basic Info</td>
+			<td class="alice">Energy</td>
+			<td class="alice">Multiply info</td>
+			<td class="alice">Energy Obtainment</td>
+			<td class="alice">Special Characteristic</td>
+		</tr>
+		<tr>
+			<td id="white"></td>
+			<td>
+				<p>White</p>
+			</td>
+			<td>
+				<p>Just an empty space</p>
+			</td>
+			<td>
+				<p>-</p>
+			</td>
+			<td>No multiply</td>
+			<td>
+				<p>No energy</p>
+			</td>
+			<td>
+				<p>No special characteristics</p>
+			</td>
+		</tr>
+
+		<tr>
+			<td id="green"></td>
+			<td>
+				<p>կանաչ</p>
+			</td>
+			<td>
+				<p>Դա պարզապես խոտ է:</p>
+			</td>
+			<td>
+				<p>-</p>
+			</td>
+			<td>
+				<p>Կարող է բազմապատկվել մեկ անգամ 3 շրջանակներում</p>
+			</td>
+			<td>
+				<p>No energy</p>
+			</td>
+			<td>
+				<p>կարողանում է բազմանալ</p>
+			</td>
+		</tr>
+
+		<tr>
+			<td id="blue"></td>
+			<td>
+				<p>դեղին</p>
+			</td>
+			<td>
+				<p>խոտակեր</p>
+			</td>
+			<td>
+				<p>5</p>
+			</td>
+			<td>
+				<p>Կարող է բազմապատկվել մեկ անգամ 10ից ավել շրջանակներում
+
+				</p>
+			</td>
+			<td>
+				<p>Խոտ ուտելով </p>
+			</td>
+			<td>
+				<p>Կարողանում է ուտել խոտեր</p>
+			</td>
+		</tr>
+
+		<tr>
+			<td id="red"></td>
+			<td>
+				<p>կարմիր</p>
+			</td>
+			<td>
+				<p>գիշատիչ</p>
+			</td>
+			<td>
+				<p>10</p>
+			</td>
+			<td>
+				<p>Կարող է բազմապատկվել մեկ անգամ 10ից ավել շրջանակներում </p>
+			</td>
+			<td>
+				<p>խոտակեր ուտելով</p>
+			</td>
+			<td>
+				<p>Կարողանում է ուտել խոտակեր </p>
+			</td>
+		</tr>
+
+		<tr>
+			<td id="purple"></td>
+			<td>
+				<p>կապույտ</p>
+			</td>
+			<td>
+				<p>մարդ</p>
+			</td>
+			<td>
+				<p>200</p>
+			</td>
+			<td>
+				<p>չի բազմանում</p>
+			</td>
+			<td>
+				<p>գիշատիչ և խոտակեր ուտելով</p>
+			</td>
+			<td>
+				<p> ՈՒտում է Գիշատիչներին, և խոտակերներին մոտակա 24 վանդակներում, էներգիան ավելանում է 2֊ով</p>
+			</td>
+		</tr>
+
+		<tr>
+			<td id="grey"></td>
+			<td>
+				<p>սև</p>
+			</td>
+			<td>
+				<p>Սատանա</p>
+			</td>
+			<td>
+				<p>200</p>
+			</td>
+			<td>
+				<p>չի բազմանում</p>
+			</td>
+			<td>
+				<p>ուտում է մարդկանց</p>
+			</td>
+			<td>
+				<p>շարժվում է խաչածև, էներգիան քչանում է 2֊ով</p>
+			</td>
+		</tr>
+
+		<tr>
+			<td id="dark"></td>
+			<td>
+				<p>մանուշակագույն</p>
+			</td>
+			<td>
+				<p>Խոտաճացնող</p>
+			</td>
+			<td>
+				<p>200</p>
+			</td>
+			<td>
+				<p>չի բազմանում </p>
+			</td>
+			<td>
+				<p>չի ուտում</p>
+			</td>
+			<td>
+				<p>չի սատկում,արաչացնումէ խոտեր,շարժվումէ սարդածև</p>
+			</td>
+		</tr>
+
+
+	</table>
+	<br>
+</body>
+
+</html>
